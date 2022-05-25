@@ -31,5 +31,25 @@ while keep_going == "":
     elif len(factor_list) % 2 == 1:
         comment = "{} is a perfect square".format(var_to_factor)
 
+    # output factors and comment
 
+    # Generate heading...
+    if var_to_factor == 1:
+        heading = "One is special..."
 
+    else:
+        heading = "Factors of {}".format(var_to_factor)
+
+    # Output factors and comment
+    statement generator(heading, "*" )
+    print()
+    print(factor_list)
+    print(comment)
+
+    print()
+    keep_going = input("Press <enter> to continue or any key to quit")
+    print()
+
+print()
+print("Thank you for using the factors calculator")
+print()
