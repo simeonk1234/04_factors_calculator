@@ -6,7 +6,7 @@ my_list = []
 
 # generate 4 random numbers between 1 & 10...
 for item in range(0, 4):
-
+3
     # generate random number between 1 and 10
     random_num = random.randint(1, 10)
 
