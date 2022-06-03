@@ -1,5 +1,59 @@
 # Main routine goes here
 
+# Puts series of symbols at the start and end of text (for emphasis)
+def statement_generator(text, decoration):
+
+    # Make string with five characters
+    ends = decoration * 5
+
+    # add decoration to start and end of statement
+    statement = "{}  {}  {}".format(ends, text, ends)
+
+    print()
+    print(statement)
+    print()
+
+    return ""
+
+# displays instructions / information
+def instructions():
+
+    statement_generator("Instructions / Information", "=")
+    print()
+    print("Please choose a data type (image / text / integer")
+    print()
+    print("This program assumes that images are being respresented in 24 bit colour (ie: 24 bits per pixel). For text we asume that ascii encoding is being used (8 bits per character) ")
+    print()
+    print("Complete as many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
+    return ""
+
+def num_check(question):
+
+    valid = False
+    while not valid:
+
+        error = "Please enter a number that is more than one and less than 201"
+    
+        try:
+
+            # ask user to enter a number
+            response = int(input(question))
+
+            # checks number is more than zero
+            if 0 < response < 201:
+                return response
+
+            # outputs error if input is invalid
+            else:
+                print(error)
+                print()
+
+        except ValueError:
+            print(error)
+        
+def get_factors():
+    print(24)
+
 # Heading
 
 statement_generator("Factors Calculator", "-")
@@ -41,7 +95,7 @@ while keep_going == "":
         heading = "Factors of {}".format(var_to_factor)
 
     # Output factors and comment
-    statement generator(heading, "*" )
+    statement_generator(heading, "*" )
     print()
     print(factor_list)
     print(comment)
