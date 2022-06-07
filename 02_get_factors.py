@@ -26,8 +26,10 @@ def num_check(question):
 def get_factors(num):
     
 # Main Routine goes here
-keep_going = ""
-while keep_going == "": 
+    keep_going = ""
+    while keep_going == "": 
+       print()
+       var_integer = num_check("Enter Integer: ")
     print()
-    var_integer = num_check("Enter Integer: ")
-    print()
+    
+    

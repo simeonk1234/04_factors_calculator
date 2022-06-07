@@ -20,11 +20,12 @@ def instructions():
 
     statement_generator("Instructions / Information", "=")
     print()
-    print("Please choose a data type (image / text / integer")
+    print("Please choose an integer that is more than or equal to 1 or less than or equal to 200. ")
     print()
-    print("This program assumes that images are being respresented in 24 bit colour (ie: 24 bits per pixel). For text we asume that ascii encoding is being used (8 bits per character) ")
+    print("This program will list the factors of your chosen integer. ")
     print()
-    print("Complete as many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
+    print("It will list all the factors of the integer. ")
+    print()
     return ""
 
 def num_check(question):
