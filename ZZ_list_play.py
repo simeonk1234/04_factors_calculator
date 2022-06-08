@@ -5,10 +5,10 @@ import random
 my_list = []
 
 # generate 4 random numbers between 1 & 10...
-for item in range(0, 4):
+for item in range(0, 60):
 
     # generate random number between 1 and 10
-    random_num = random.randint(1, 10)
+    random_num = random.randint(1, 200)
 
     # add number to list
     my_list.append(random_num)

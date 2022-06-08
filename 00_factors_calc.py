@@ -41,7 +41,7 @@ def num_check(question):
             response = int(input(question))
 
             # checks number is more than zero
-            if 0 < response < 201:
+            if 0 <= response <= 200:
                 return response
 
             # outputs error if input is invalid
@@ -52,8 +52,18 @@ def num_check(question):
         except ValueError:
             print(error)
         
+num = response 
+
 def get_factors():
     print(24)
+    # find factor of number
+    def get_factors (num):
+        print('The factors of', num, 'are:')
+    for i in range(1, num+1):
+        if(num % i) == 0:
+            print(i, end=' ')
+            
+            return ""
 
 # Heading
 
