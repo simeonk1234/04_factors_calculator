@@ -52,18 +52,12 @@ def num_check(question):
         except ValueError:
             print(error)
         
-num = response 
 
-def get_factors():
-    print(24)
-    # find factor of number
-    def get_factors (num):
-        print('The factors of', num, 'are:')
-    for i in range(1, num+1):
-        if(num % i) == 0:
-            print(i, end=' ')
-            
-            return ""
+def get_factors(x):
+   print("The factors of",x,"are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
 
 # Heading
 
