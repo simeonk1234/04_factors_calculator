@@ -41,7 +41,7 @@ def num_check(question):
             response = int(input(question))
 
             # checks number is more than zero
-            if 0 <= response <= 200:
+            if 1 <= response <= 200:
                 return response
 
             # outputs error if input is invalid
@@ -54,10 +54,16 @@ def num_check(question):
         
 
 def get_factors(x):
-   print("The factors of",x,"are:")
-   for i in range(1, x + 1):
+
+    factors = []
+
+    print()
+    for i in range(1, x + 1):
        if x % i == 0:
-           print(i)
+           print()
+           factors.append(i)
+    
+    return factors 
 
 # Heading
 
@@ -78,12 +84,18 @@ while keep_going == "":
 
     # ask user for number to be factored...
     var_to_factor = num_check("Number? ")
-
-    if var_to_factor != 1:
-        factor_list = get_factors(var_to_factor)
-    else:
-        comment = "One is UNITY!  It only has one factor.  Itself :)"
     
+    # Generate heading...
+    if var_to_factor == 1:
+        heading = "One is special..."
+    else:
+        heading = "Factors of {}".format(var_to_factor)
+     
+    if var_to_factor == 1:
+        comment = "One is UNITY!  It only has one factor.  Itself :)"
+        factor_list = ""
+    else:
+       factor_list = get_factors(var_to_factor)
 
     # comments for squares / primes
     if len(factor_list) == 2:
@@ -94,16 +106,9 @@ while keep_going == "":
 
     # output factors and comment
 
-    # Generate heading...
-    if var_to_factor == 1:
-        heading = "One is special..."
-
-    else:
-        heading = "Factors of {}".format(var_to_factor)
-
+    
     # Output factors and comment
     statement_generator(heading, "*" )
-    print()
     print(factor_list)
     print(comment)
 
